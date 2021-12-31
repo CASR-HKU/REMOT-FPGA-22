@@ -1,0 +1,16 @@
+auFifo   : 2800
+auNum    : 6
+dAdd     : 6
+input    : 'dataset/inbound.mat'
+name     : 'inbound'
+tDel     : 5
+areaDel  : 64
+tLive    : 3
+areaLive : 256
+numLive  : 40
+epsDiv   : 10
+iomMer   : 0.3
+dsMer    : 4
+outfolder: 'result'
+merge    : 'IOM'
+split    : 'DBSCAN'   

@@ -1,0 +1,76 @@
+{
+    "versionMajor": "0",
+    "versionMinor": "0",
+    "usesPR": "false",
+    "platformState": "pre_synth",
+    "topModuleName": "design_1_wrapper",
+    "acceleratorBinaryFormat": "xclbin2",
+    "acceleratorBinaryContent": "bitstream",
+    "validAcceleratorBinaryContentValues": "dcp,bitstream",
+    "dcpFunctionStripped": "false",
+    "dcpEncrypted": "false",
+    "defaultOutputType": "hw_export",
+    "designIntent": {
+        "dataCenter": {
+            "value": "false",
+            "explicit": "false"
+        },
+        "embedded": {
+            "value": "false",
+            "explicit": "false"
+        },
+        "externalHost": {
+            "value": "false",
+            "explicit": "false"
+        },
+        "serverManaged": {
+            "value": "false",
+            "explicit": "false"
+        }
+    },
+    "devices": [
+        {
+            "name": "fpga0",
+            "type": "8",
+            "fpgaPart": "zynquplus:xczu3eg:sbva484:-1:i",
+            "part": {
+                "name": "xczu3eg-sbva484-1-i",
+                "architecture": "zynquplus",
+                "device": "xczu3eg",
+                "package": "sbva484",
+                "speedGrade": "-1",
+                "tempGrade": "i"
+            },
+            "core": {
+                "name": "OCL_REGION_0",
+                "type": "clc_region",
+                "numComputeUnits": "60"
+            }
+        }
+    ],
+    "files": [
+        {
+            "name": "bitfile.bit",
+            "type": "FULL_BIT"
+        }
+    ],
+    "vendor": "xilinx",
+    "boardId": "ultra96v2",
+    "description": "Vivado generated Hardware Platform",
+    "uniqueName": "xilinx:ultra96v2::0.0",
+    "fpgaPart": "zynquplus",
+    "fpgaDevice": "xczu3eg",
+    "unifiedPlatform": "true",
+    "expandablePlatform": "false",
+    "hardware": "true",
+    "softwareEmulation": "true",
+    "hardwareEmulation": "false",
+    "hardwareEmuPlatform": "false",
+    "usesNIFD": "false",
+    "generatedName": "Vivado",
+    "generatedVersion": "2020.2",
+    "generatedChangeList": "3064766",
+    "generatedIpChangeList": "3064653",
+    "generatedTimestamp": "Fri Dec 17 17:25:56 2021"
+}
+

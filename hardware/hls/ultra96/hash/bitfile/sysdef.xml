@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="7" DIGEST="">
+	<TOOL_VERSION Version="2020.2"/>
+	<MODE Name="Post-Synthesis"/>
+	<SYSTEMINFO BOARD="" PART="xczu3eg-sbva484-1-i" ARCH="zynquplus" PACKAGE="sbva484" DEVICE="xczu3eg" SPEED="-1"/>
+	<HIERARCHY Name="design_1_wrapper"/>
+	<File Type="HW_HANDOFF" Name="design_1.hwh" src_db="design_1.hwdef" DESIGN_HIERARCHY="design_1_i" BD_TYPE="DEFAULT_BD">
+	</File>
+	<File Type="BDA" Name="design_1.bda" src_db="design_1.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT" Name="psu_init.c" src_db="design_1_zynq_ultra_ps_e_0_0.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT" Name="psu_init.h" src_db="design_1_zynq_ultra_ps_e_0_0.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT_GPL" Name="psu_init_gpl.c" src_db="design_1_zynq_ultra_ps_e_0_0.hwdef">
+	</File>
+	<File Type="PS_FSBL_INIT_GPL" Name="psu_init_gpl.h" src_db="design_1_zynq_ultra_ps_e_0_0.hwdef">
+	</File>
+	<File Type="PS_INIT_HELP" Name="psu_init.html" src_db="design_1_zynq_ultra_ps_e_0_0.hwdef">
+	</File>
+	<File Type="PS_XMD_INIT" Name="psu_init.tcl" src_db="design_1_zynq_ultra_ps_e_0_0.hwdef">
+	</File>
+	<File Type="BIT" Name="bitfile.bit" src_db="temp.hdf">
+	</File>
+	<DRIVERS>
+		<DRIVER IP_VLNV="xilinx.com:hls:top:1.0">
+			<File PATH="drivers/top_v1_0/data/top.mdd"/>
+			<File PATH="drivers/top_v1_0/data/top.tcl"/>
+			<File PATH="drivers/top_v1_0/src/Makefile"/>
+			<File PATH="drivers/top_v1_0/src/xtop.c"/>
+			<File PATH="drivers/top_v1_0/src/xtop.h"/>
+			<File PATH="drivers/top_v1_0/src/xtop_hw.h"/>
+			<File PATH="drivers/top_v1_0/src/xtop_linux.c"/>
+			<File PATH="drivers/top_v1_0/src/xtop_sinit.c"/>
+		</DRIVER>
+	</DRIVERS>
+	<USEDRESOURCES/>
+</Project>
+

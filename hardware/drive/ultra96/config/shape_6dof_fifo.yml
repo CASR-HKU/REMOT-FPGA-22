@@ -1,0 +1,17 @@
+auFifo   : 128
+auNum    : 12
+dAdd     : 2
+input    : 'dataset/shapes.mat'
+name     : 'shapes_fifo_'
+tDel     : 2
+areaDel  : 64
+tLive    : 3
+areaLive : 256
+numLive  : 40
+epsDiv   : 22
+iomMer   : 0.1
+dsMer    : 30
+outfolder: 'result'
+merge    : 'IOM'
+split    : 'DBSCAN'
+bitfile  : 'bitfile/fifo_128_2_12.bit'
