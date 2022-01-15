@@ -76,7 +76,7 @@ class Controller():
         self.lx, self.ly = self.events[:, :2].max(0) + 1
         self.pFrame = -1
         self.nFrame = self.events[:, 4][-1] + 1
-        self.frame0 = np.zeros((self.ly, self.lx, 3), 'uint8')
+        self.frame0 = np.zeros((self.ly, self.lx, 3), 'uint8') + 255
         self.iFrame = self.frame0.copy()
         self.frames = np.tile(self.frame0, (self.nFrame, 1, 1, 1))
 
@@ -202,7 +202,7 @@ class Controller():
                 self.globalID += 1
                 au.auNumber[0] = self.globalID
 
-    def Animation(self, x, y, ts, f):
+    def Animation(self, x, y, p, ts, f):
         if f > self.pFrame and self.pFrame >= 0:
             if len(self.AUs) >= 1:
                 idxC = np.array([au.auNumber[0] %
@@ -246,7 +246,10 @@ class Controller():
             self.pFrame = f
             self.iFrame = self.frame0.copy()
 
-        self.iFrame[y, x] = [255, 255, 255]
+        if p > 0:
+            self.iFrame[y, x] = [255, 0, 0]
+        else:
+            self.iFrame[y, x] = [0, 0, 255]
 
     def SaveResults(self):
         if not os.path.exists(self.folder):
@@ -297,6 +300,7 @@ class Controller():
         for i in tqdm(range(self.events.shape[0])):
             x = self.events[i, 0]
             y = self.events[i, 1]
+            p = self.events[i, 2]
             ts = self.events[i, 3]
             f = self.events[i, 4]
 
@@ -311,7 +315,7 @@ class Controller():
 
             if animation:
                 self.animation = True
-                self.Animation(x, y, ts, f)
+                self.Animation(x, y, p, ts, f)
 
             exist_interested = False
 
